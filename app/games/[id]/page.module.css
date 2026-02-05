@@ -1,0 +1,28 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.icon {
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 20px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
