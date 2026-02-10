@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>好きなゲームの紹介</p>
+        <h1 className="title">好きなゲームの紹介</h1>
       </div>
 
       <div className={styles.grid}>

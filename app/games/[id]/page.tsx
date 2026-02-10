@@ -2,11 +2,12 @@ import { client } from "@/libs/microcms";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { Game } from "@/libs/types";
 
 type Props = { params: { id: string } };
 
 export default async function GameDetail({ params }: Props) {
-  const data = await client.get({
+  const data = await client.get<Game>({
     endpoint: "games",
     contentId: params.id,
   });
