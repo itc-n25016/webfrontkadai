@@ -1,6 +1,7 @@
 export type Game = {
   title: string;
-  platforms: string[];
+  developer?: string;
+  players?: string;
   genre: string[];
   releaseYear: number;
   comment: string;

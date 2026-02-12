@@ -7,7 +7,7 @@ type Game = {
   id: string;
   title: string;
   icon: { url: string };
-  genre: string;
+  genre: string[];
 };
 
 export default async function Home() {
