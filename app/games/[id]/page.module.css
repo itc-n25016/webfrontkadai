@@ -84,3 +84,59 @@
   gap: 12px;
   overflow-x: auto;
 }
+
+.rating {
+  font-size: 30px;
+  color: gold;
+  margin: 12px 0;
+}
+
+.gallery {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.screenshot {
+  min-width: 320px;
+  border-radius: 12px;
+}
+
+.spec {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.spec th {
+  background: #111;
+  color: white;
+  padding: 8px;
+  width: 120px;
+}
+
+.spec td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.storeButtons a {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 16px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.related {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.related a {
+  text-align: center;
+}

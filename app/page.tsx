@@ -30,8 +30,9 @@ export default async function Home() {
             <Image
               src={game.icon.url}
               alt={game.title}
-              width={120}
-              height={120}
+              width={300}
+              height={100}
+              className={styles.image}
             />
             <h2>{game.title}</h2>
             <p>ジャンル: {game.genre}</p>
