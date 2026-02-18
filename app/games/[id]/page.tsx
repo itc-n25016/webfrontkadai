@@ -16,10 +16,9 @@ type Game = {
   description?: string;
   rating?: string;
   officialUrl?: string;
-  comment?: string;
   screenshots?: { url: string }[];
   appStore?: string;
-  googlePlay?: string;
+  googleplay?: string;
   steam?: string;
 };
 
@@ -95,21 +94,14 @@ export default async function GameDetail({
       {data.description && (
         <section className={styles.section}>
           <h2>説明</h2>
-          <p>{data.description}</p>
-        </section>
-      )}
-
-      {data.comment && (
-        <section className={styles.section}>
-          <h2>推しコメント</h2>
-          <p>{data.comment}</p>
+          <div dangerouslySetInnerHTML={{ __html: data.description }} />
         </section>
       )}
 
       {/* スクショギャラリー */}
       {data.screenshots && data.screenshots.length > 0 && (
         <section className={styles.section}>
-          <h2>スクリーンショット</h2>
+          <h2>ゲーム画像</h2>
 
           <div className={styles.gallery}>
             {data.screenshots.map((img, i) => (
@@ -136,8 +128,8 @@ export default async function GameDetail({
               App Store
             </a>
           )}
-          {data.googlePlay && (
-            <a href={data.googlePlay} target="_blank">
+          {data.googleplay && (
+            <a href={data.googleplay} target="_blank">
               Google Play
             </a>
           )}

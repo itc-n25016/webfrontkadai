@@ -4,11 +4,10 @@ export type Game = {
   players?: string;
   genre: string[];
   releaseYear: number;
-  comment: string;
   rating?: string;
   screenshots?: { url: string }[];
   appStore?: string;
-  googlePlay?: string;
+  googleplay?: string;
   steam?: string;
   icon: {
     url: string;
