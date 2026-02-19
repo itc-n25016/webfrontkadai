@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 import { client } from "@/libs/microcms";
 import Image from "next/image";
@@ -15,7 +15,6 @@ type Game = {
 export default async function Home() {
   const data = await client.get({
     endpoint: "games",
-    customRequestInit: { cache: "no-store" },
   });
 
   const games: Game[] = data.contents;
