@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { client } from "@/libs/microcms";
 import Image from "next/image";
 import Link from "next/link";

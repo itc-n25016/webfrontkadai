@@ -50,6 +50,8 @@ export default async function GameDetail({
     notFound();
   }
 
+  console.log("RELATED", related);
+
   return (
     <main className={styles.container}>
       {/* タイトル */}
