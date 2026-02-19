@@ -38,11 +38,16 @@ export default async function GameDetail({
 
     related = await client.get({
       endpoint: "games",
-      queries: {
-        filters: `genre[equals]${data.genre}[and]id[not_equals]${params.id}`,
-        limit: 3,
-        orders: "-releaseYear",
-      },
+      queries: data.genre?.trim()
+        ? {
+            filters: `genre[equals]${data.genre}[and]id[not_equals]${params.id}`,
+            limit: 3,
+            orders: "-releaseYear",
+          }
+        : {
+            filters: `id[not_equals]${params.id}`,
+            limit: 3,
+          },
     });
   } catch {
     notFound();
