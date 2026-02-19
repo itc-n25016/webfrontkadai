@@ -40,6 +40,8 @@ export default async function GameDetail({
       endpoint: "games",
       queries: {
         filters: `genre[contains]${data.genre?.[0]}[and]id[not_equals]${params.id}`,
+        limit: 3,
+        orders: "-releaseYear",
       },
     });
   } catch {
