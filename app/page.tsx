@@ -13,7 +13,11 @@ type Game = {
 };
 
 export default async function Home() {
-  const data = await client.get({ endpoint: "games" });
+  const data = await client.get({
+    endpoint: "games",
+    customRequestInit: { cache: "no-store" },
+  });
+
   const games: Game[] = data.contents;
 
   return (
