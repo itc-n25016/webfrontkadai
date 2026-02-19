@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 type Game = {
   title: string;
   icon: { url: string };
-  genre?: string;
+  genre?: string[];
   developer?: string;
   players?: string;
   releaseYear?: number;
@@ -28,7 +28,7 @@ export default async function GameDetail({
   params: { id: string };
 }) {
   let data: Game;
-  let related;
+  let related = { contents: [] };
 
   try {
     data = await client.get<Game>({
@@ -36,19 +36,16 @@ export default async function GameDetail({
       contentId: params.id,
     });
 
-    related = await client.get({
-      endpoint: "games",
-      queries: data.genre?.trim()
-        ? {
-            filters: `genre[equals]${data.genre}[and]id[not_equals]${params.id}`,
-            limit: 3,
-            orders: "-releaseYear",
-          }
-        : {
-            filters: `id[not_equals]${params.id}`,
-            limit: 3,
-          },
-    });
+    if (data.genre?.length) {
+      related = await client.get({
+        endpoint: "games",
+        queries: {
+          filters: `genre[contains]${data.genre[0]}[and]id[not_equals]${params.id}`,
+          limit: 3,
+          orders: "-releaseYear",
+        },
+      });
+    }
   } catch {
     notFound();
   }
