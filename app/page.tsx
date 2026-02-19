@@ -1,5 +1,3 @@
-export const revalidate = 0;
-
 import { client } from "@/libs/microcms";
 import Image from "next/image";
 import Link from "next/link";
