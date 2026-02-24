@@ -1,14 +1,16 @@
 # 🎮 Game Library
 
 好きなゲームをまとめて紹介するための Web アプリです。
+
 microCMS を使ってゲーム情報を管理し、Next.js で表示しています。
 
 デモサイト:
-https://vercel.com/miyagi-keisukes-projects/webfrontkadai
+https://webfrontkadai-sigma.vercel.app/
 
 ## 📌 概要
 
 このアプリは、自分の好きなゲームをコレクション形式で紹介するサイトです。
+
 CMSからゲーム情報を追加するだけで、自動で一覧・詳細ページに反映されます。
 
 ## 🚀 主な機能
@@ -31,12 +33,15 @@ CMSからゲーム情報を追加するだけで、自動で一覧・詳細ペ�
 ## 📁 ディレクトリ構成
 
 app
+
 ・page.tsx --- トップページ
 
 app/games/[id]
+
 ・page.tsx --- 詳細ページ
 
 libs
+
 ・microcms.ts --- API接続
 
 ## 🛠 開発環境セットアップ
