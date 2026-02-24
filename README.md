@@ -6,14 +6,10 @@ microCMS を使ってゲーム情報を管理し、Next.js で表示していま
 デモサイト:
 https://vercel.com/miyagi-keisukes-projects/webfrontkadai
 
----
-
 ## 📌 概要
 
 このアプリは、自分の好きなゲームをコレクション形式で紹介するサイトです。
 CMSからゲーム情報を追加するだけで、自動で一覧・詳細ページに反映されます。
-
----
 
 ## 🚀 主な機能
 
@@ -25,8 +21,6 @@ CMSからゲーム情報を追加するだけで、自動で一覧・詳細ペ�
 - 公式サイトリンク
 - CMSの「表示」ONのみ公開
 
----
-
 ## 🗺 ページ構成
 
 | ページ      | 内容                       |
@@ -34,22 +28,16 @@ CMSからゲーム情報を追加するだけで、自動で一覧・詳細ペ�
 | /           | トップページ（ゲーム一覧） |
 | /games/[id] | ゲーム詳細ページ           |
 
----
-
 ## 📁 ディレクトリ構成
 
-```
 app
- ┣ page.tsx               --- トップページ
- ┗ games
-    ┗ [id]
-       ┗ page.tsx         --- 詳細ページ
+┣ page.tsx --- トップページ
+┗ games
+┗ [id]
+┗ page.tsx --- 詳細ページ
 
 libs
- ┗ microcms.ts            --- API接続
-```
-
----
+┗ microcms.ts --- API接続
 
 ## 🛠 開発環境セットアップ
 
@@ -66,8 +54,6 @@ npm run dev
 http://localhost:3000
 ```
 
----
-
 ## 📦 使用技術
 
 - Next.js
@@ -75,5 +61,3 @@ http://localhost:3000
 - microCMS
 - CSS Modules
 - Vercel
-
----
