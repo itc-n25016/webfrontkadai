@@ -31,13 +31,13 @@ CMSからゲーム情報を追加するだけで、自動で一覧・詳細ペ�
 ## 📁 ディレクトリ構成
 
 app
-┣ page.tsx --- トップページ
-┗ games
-┗ [id]
-┗ page.tsx --- 詳細ページ
+・page.tsx --- トップページ
+
+app/games/[id]
+・page.tsx --- 詳細ページ
 
 libs
-┗ microcms.ts --- API接続
+・microcms.ts --- API接続
 
 ## 🛠 開発環境セットアップ
 
