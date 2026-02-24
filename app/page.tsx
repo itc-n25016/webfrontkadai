@@ -14,7 +14,7 @@ export default async function Home() {
   const data = await client.get({
     endpoint: "games",
     queries: {
-      filters: "表示[equals]true",
+      filters: "isFavorite[equals]true",
     },
   });
 
