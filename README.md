@@ -13,7 +13,6 @@ https://webfrontkadai-sigma.vercel.app/
 - スクリーンショットギャラリー
 - 外部ストアリンク表示
 - 公式サイトリンク
-- CMSの「表示」ONのみ公開
 
 ## 🗺 ページ構成
 
